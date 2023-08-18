@@ -1,0 +1,180 @@
+/* Reset de margem e padding para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos do body */
+body {
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 5s ease infinite;
+  background-size: 200% 200%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos do container */
+.container,
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.625rem;
+  width: 26.75rem;
+  padding: 3rem 4rem;
+  border-radius: 0.3125rem;
+  box-shadow: 0rem 1.25rem 3.125rem 0rem rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+}
+
+/* Estilos dos títulos */
+h1 {
+  width: 16.25rem;
+  margin-bottom: 1rem;
+  color: #34355b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Estilos dos parágrafos */
+p {
+  color: #34355b;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Estilos das imagens */
+.container img,
+.container2 img {
+  max-width: 100%;
+}
+
+/* Animação de shake para as imagens */
+.container img:hover {
+  animation: shakeX 0.1s ease-in-out infinite, shakeY 0.1s ease-in-out infinite;
+}
+
+/* Estilos do container2 */
+.container2 {
+  padding-bottom: 4rem;
+}
+
+/* Estilos do parágrafo dentro do container2 */
+.container2 p {
+  display: flex;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+  background: #e4edf1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: downTop 0.6s ease-in-out;
+  width: 273px;
+  color: #000;
+  font-family: "Dancing Script";
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Animação de aparecer para a imagem dentro do container2 */
+.container2 > img {
+  animation: appear 1s ease-in-out;
+}
+
+/* Estilos do botão dentro do container2 */
+.container2 button {
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  padding: 16px;
+  border-radius: 4px;
+  background: #ff9500;
+  align-items: flex-start;
+  gap: 10px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+/* Animação de hover para o botão dentro do container2 */
+.container2 button:hover {
+  background-color: #db8103;
+}
+
+/* Classe para ocultar elementos */
+.hide {
+  display: none;
+}
+
+/* Media query para dispositivos menores */
+@media (max-width: 27.5rem) {
+  .container,
+  .container2 {
+    width: 12.5rem;
+  }
+
+  h1,
+  p {
+    font-size: 70%;
+  }
+}
+
+/* Animação de gradiente */
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Animação de aparecer */
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animação de shakeX */
+@keyframes shakeX {
+  50% {
+    transform: translateX(2%);
+  }
+}
+
+/* Animação de shakeY */
+@keyframes shakeY {
+  50% {
+    transform: translateY(1%);
+  }
+}
+
+/* Animação de downTop */
+@keyframes downTop {
+  0% {
+    transform: translateY(7.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
